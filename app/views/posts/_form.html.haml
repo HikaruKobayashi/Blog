@@ -1,0 +1,5 @@
+.field
+  = f.label :image
+  = image_tag(@post.image.url) if @post.image && @post.url
+    = f.file_field :image
+    = f.hidden_field :image

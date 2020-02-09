@@ -1,0 +1,73 @@
+-# ----------------------------
+-# header
+-# ----------------------------
+= render 'layouts/header'
+
+%img.col-12.sea-img{ :src => "assets/sea.jpg" }
+
+.container
+  .row
+    - if current_user
+      %body.col-12
+        %table.table.table-striped.table-bordered
+          %thead
+            %tr
+              %th タイトル
+              %th 投稿者
+              %th 投稿日時
+              %th PV
+              %th
+          %tbody
+          - @post.each do |post|
+            %tr
+              %th= post.title
+              %td= post.name
+              %td= post.created_at.strftime('%Y/%m/%d %H:%M')
+              %td= post.impressionist_count
+              %td
+                = link_to "/posts/#{post.id}/destroy", {method: "post"} do
+                  %button 削除
+
+    -# form_withを使って書き換えする
+    .wrapper.col-12
+      = form_with url: posts_path, local: true do |f|
+        %h2.top-title News
+        - @post.each do |post|
+          %div
+            %p.post-label= post.label
+          .article.col-12
+            .form-group.thumbnail
+              %p
+                = image_tag post.image.thumb.url, class: 'img-responsive' if post.image.present?
+                -# = image_tag post.image.thumb.url if post.image.present?
+            .form-group.heading
+              -# = f.label :id, post.id
+              = f.label :title, post.title, class: 'thumbnail-title'
+              .sub-article
+                -# %p= post.created_at.strftime('%Y/%m/%d %H:%M')
+                = f.label :article, post.article
+              %p= post.name
+              %p= link_to 'Read more...', post, id: 'detail-' + post.id.to_s
+
+        -# %h2.top-title Popular
+        -# - @post.each.with_index(1) do |rank, i|
+        -#   .col-12
+        -#     -# .form-group.thumbnail
+        -#     -#   %p= image_tag rank.image.thumb.url if rank.image.present?
+        -#     -# .form-group.heading
+        -#     -#   = f.label :id, rank.id
+        -#     -#   .sub-article
+        -#     -#     %p= rank.created_at.strftime('%Y/%m/%d %H:%M')
+        -#     -#     = f.label :title, rank.article
+        -#     -#   %p= rank.name
+        -#     -#   %p= link_to 'Read more...', rank, id: 'detail-' + rank.id.to_s
+
+        -#     .form-group.popular
+        -#       %p= "#{i}"
+        -#       %p= image_tag rank.image.thumb.url if rank.image.present?
+        -#       %p= rank.impressionist_count
+
+-# ----------------------------
+-# footer
+-# ----------------------------
+= render 'layouts/footer'

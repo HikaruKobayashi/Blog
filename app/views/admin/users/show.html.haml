@@ -1,0 +1,28 @@
+-# .wrapper.col-10
+-#   %div
+-#     .main-article-title.col-12
+-#       %h2= @user.title
+-#     .main-article
+-#       %div
+-#         %p= simple_format(@post.article)
+-#     .footer-article
+-#       %p= @post.name
+-#       %p= @post.created_at.strftime('%Y/%m/%d %H:%M')
+
+
+-# .container
+-#   .row
+-#     %body.col-12
+-#       %table.table.table-striped.table-bordered
+-#         %thead
+-#           %tr
+-#             %th ユーザー名
+-#             %th メールアドレス
+-#             %th
+-#         %tbody
+-#           %tr
+-#             %th= @user.name
+-#             %td= @user.email
+-#             %td
+-#               = link_to "/user/#{user.id}/destroy", {method: "user"} do
+-#                 %button 削除
