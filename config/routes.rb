@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'posts#index'
-  resources :posts, only: [:index, :new, :create, :show]
+  resources :posts, only: [:index, :new, :create, :show, :edit, :update]
   post 'posts/:id/destroy' => 'posts#destroy'
 
   get 'introduction' => 'introduction#index'
