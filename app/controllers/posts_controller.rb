@@ -22,6 +22,12 @@ class PostsController < ApplicationController
     redirect_to('/')
   end
 
+  def update
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    redirect_to('/')
+  end
+
   def destroy
     @post = Post.find_by(id: params[:id])
     @post.destroy
