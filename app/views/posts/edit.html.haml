@@ -1,1 +1,34 @@
-%h1 Posts#edit
+-# ----------------------------
+-# header
+-# ----------------------------
+= render 'layouts/header'
+
+%h2 記事編集
+%div
+= form_for @post do |f|
+  .form-group
+    = f.label :name, 'ユーザー名'
+    = f.text_field :name, class: 'form-control'
+    %small#poster-tip.form-text.text-muted
+      名前を入力してください。
+  .form-group
+    = f.label :title, 'タイトル'
+    = f.text_area :title, class: 'form-control'
+  .form-group
+    = f.label :article, '内容'
+    = f.text_area :article, class: 'form-control', rows:10
+    %small.form-text.text-muted{:id => "content-tip\""}
+      投稿内容を入力してください。
+  .form-group
+    %p ラベル
+    = f.select :label, [['English', 'English'], ['Programming', 'Programming']]
+  .form-group
+    %p 画像
+    = f.file_field :image
+
+  = f.submit 'submit', class: 'btn btn-info btn-block'
+
+-# ----------------------------
+-# footer
+-# ----------------------------
+= render 'layouts/footer'
