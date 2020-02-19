@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    impressionist(@post, nil, unique: [:id])
+    # impressionist(@post, nil, unique: [:id])
   end
 
   def new
