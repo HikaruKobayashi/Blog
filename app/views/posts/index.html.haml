@@ -16,7 +16,6 @@
               %th 投稿者
               %th id
               %th 投稿日時
-              -# %th PV
               %th
               %th
           %tbody
@@ -26,7 +25,6 @@
               %td= post.name
               %td= post.id
               %td= post.created_at.strftime('%Y/%m/%d %H:%M')
-              -# %td= post.impressionist_count
               %td
                 = link_to "編集", edit_post_path(post)
               %td

@@ -73,6 +73,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # 画像を載せられるようにする
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
-# pv率を取得する
-gem 'impressionist'
-# パスワードをセキュアにする
