@@ -3,7 +3,7 @@
 -# ----------------------------
 = render 'layouts/header'
 
-%img.col-12.sea-img{ :src => "assets/sea.jpg" }
+%img.sea-img{ :src => "assets/sea.jpg" }
 
 .container
   .row
@@ -31,6 +31,7 @@
                 = link_to "/posts/#{post.id}/destroy", {method: "post"} do
                   %button 削除
 
+    - else
     -# form_withを使って書き換えする
     .wrapper.col-12
       = form_with url: posts_path, local: true do |f|

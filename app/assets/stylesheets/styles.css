@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda');
 
 /* header */
+.header {
+  height: 90px;
+  background-color: rgb(255, 255, 255);
+}
+
 .sea-img {
   background-size: cover;
   width: 100%;
