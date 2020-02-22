@@ -15,18 +15,18 @@
           %li
             = msg
 
-    %table.contact-form.col-6
+    %table.contact-form.col-12
       %tr
         %th 名前
-        %td= f.text_field :name
+        %td= f.text_field :name, :size => '40*100'
       %tr
         %th メールアドレス
-        %td= f.text_field :email
+        %td= f.text_field :email, :size => '40*100'
       %tr
         %th お問い合わせ内容
-        %td= f.text_field :message
+        %td= f.text_area :message, :size => '39*110'
 
-  = f.submit '確認', class: 'btn btn-primary submit-btn'
+  = f.submit '確認', class: 'btn btn-primary submit-btn col-4'
 
 -# ----------------------------
 -# footer

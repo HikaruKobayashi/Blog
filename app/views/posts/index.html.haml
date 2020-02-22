@@ -8,30 +8,30 @@
 .container
   .row
     - if current_user
-      %body.col-12
-        %table.table.table-striped.table-bordered
-          %thead
-            %tr
-              %th タイトル
-              %th 投稿者
-              %th id
-              %th 投稿日時
-              %th
-              %th
-          %tbody
-          - @post.each do |post|
-            %tr
-              %th= post.title
-              %td= post.name
-              %td= post.id
-              %td= post.created_at.strftime('%Y/%m/%d %H:%M')
-              %td
-                = link_to "編集", edit_post_path(post)
-              %td
-                = link_to "/posts/#{post.id}/destroy", {method: "post"} do
-                  %button 削除
+      .wrapper.col-12
+        %body.col-12
+          %table.table.table-striped.table-bordered
+            %thead
+              %tr
+                %th タイトル
+                %th 投稿者
+                %th id
+                %th 投稿日時
+                %th
+                %th
+            %tbody
+            - @post.each do |post|
+              %tr
+                %th= post.title
+                %td= post.name
+                %td= post.id
+                %td= post.created_at.strftime('%Y/%m/%d %H:%M')
+                %td
+                  = link_to "編集", edit_post_path(post)
+                %td
+                  = link_to "/posts/#{post.id}/destroy", {method: "post"} do
+                    %button 削除
 
-    - else
     -# form_withを使って書き換えする
     .wrapper.col-12
       = form_with url: posts_path, local: true do |f|

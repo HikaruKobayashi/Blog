@@ -23,9 +23,6 @@
         %li.nav-item
           %button.btn.btn-warning{type: 'button', style: 'margin: 5px;' }
             = link_to '管理者新規登録', new_admin_user_path
-        %li.nav-item
-          %button.btn.btn-warning{type: 'button', style: 'margin: 5px;' }
-            = link_to 'ログアウト', logout_path, method: :delete
       - else
         %li.nav-item
           %a

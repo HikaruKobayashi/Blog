@@ -12,20 +12,20 @@
       %tr
         %th 名前
         %td
-          = f.hidden_field :name
+          = f.hidden_field :name, :size => '40*100'
           = @inquiry.name
       %tr
         %th メールアドレス
         %td
-          = f.hidden_field :email
+          = f.hidden_field :email, :size => '40*100'
           = @inquiry.email
       %tr
         %th お問い合わせ内容
         %td
-          = f.hidden_field :message
+          = f.hidden_field :message, :size => '39*110'
           = simple_format(@inquiry.message)
 
-  = f.submit '送信', class: 'btn btn-primary submit-btn'
+  = f.submit '送信', class: 'btn btn-primary submit-btn col-4'
 
 -# ----------------------------
 -# footer
