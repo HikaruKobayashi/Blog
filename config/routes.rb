@@ -18,5 +18,6 @@ Rails.application.routes.draw do
     post 'users/:id/destroy' => 'users#destroy'
   end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # エンドポイントが見つからない時の処理をする。
+  get '*path' => 'posts#index'
 end
