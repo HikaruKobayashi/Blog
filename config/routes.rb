@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :new, :create, :show, :edit, :update]
   post 'posts/:id/destroy' => 'posts#destroy'
 
-  resources :introduction, only: [:index]
+  # resources :introduction, only: [:index]
 
   get 'login' => 'sessions#new'
   post 'login'=> 'sessions#create'
