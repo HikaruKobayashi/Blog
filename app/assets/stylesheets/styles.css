@@ -158,3 +158,8 @@ body {
   font-size: 25px;
   padding: 10px 10px;
 }
+
+.log-in-btn, .log-in-btn:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
