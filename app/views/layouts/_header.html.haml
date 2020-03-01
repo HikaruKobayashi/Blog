@@ -32,4 +32,11 @@
         -#   = link_to 'About us', introduction_index_path, class: 'nav-link'
         %li.nav-item
           %a
-            = link_to 'Contact', inquiry_path, class: 'nav-link'
+            = link_to 'Contact', inquiry_path, class: 'nav-link', id: 'contact-btn'
+
+:javascript
+  // Open in another tab.
+  $('#contact-btn').click(function(){
+    $url = $(this).attr('href');
+    window.open($url,'_blank');
+  });
