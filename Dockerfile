@@ -15,3 +15,7 @@ EXPOSE 3000
 
 # Start the main process.
 CMD ["rails", "server", "-b", "0.0.0.0"]
+
+# Use Vim in Docker.
+RUN ["apt-get", "update"]
+RUN ["apt-get", "install", "-y", "vim"]
