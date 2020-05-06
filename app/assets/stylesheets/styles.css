@@ -51,6 +51,7 @@ body {
   box-shadow: 5px 5px 5px 5px rgba(235,235,235,0.8); 
   border-radius: 5px;
   margin-bottom: 200px;
+  overflow: scroll;
 }
 
 .sub-article {
