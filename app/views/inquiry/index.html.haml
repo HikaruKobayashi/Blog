@@ -16,15 +16,15 @@
             = msg
 
     %table.contact-form.col-12
-      %tr
+      %tr.col-12
         %th 名前
-        %td= f.text_field :name, :size => '40*100'
-      %tr
+        %td= f.text_field :name
+      %tr.col-12
         %th メールアドレス
-        %td= f.text_field :email, :size => '40*100'
-      %tr
+        %td= f.text_field :email
+      %tr.col-12
         %th お問い合わせ内容
-        %td= f.text_area :message, :size => '39*110'
+        %td= f.text_area :message
 
   = f.submit '確認', class: 'btn btn-primary submit-btn col-4'
 
