@@ -78,9 +78,7 @@ body {
 }
 
 .heading {
-  width: 250px;
-  height: 100px;
-  margin: 50px 180px 0 0;
+  margin-top: 50px;
   float: right;
 }
 
