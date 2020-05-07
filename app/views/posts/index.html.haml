@@ -50,7 +50,7 @@
               .sub-article
                 -# %p= post.created_at.strftime('%Y/%m/%d %H:%M')
                 = f.label :article, post.article
-              %p= post.name
+              -# %p= post.name
               %p= link_to 'Read more...', post, id: 'detail-' + post.id.to_s
 
         -# %h2.top-title Popular
