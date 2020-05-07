@@ -9,7 +9,7 @@ https://decode-land.herokuapp.com/
 <br>
 2.$`git clone https://github.com/HikaruKobayashi/Blog.git`を実行する。  
 <br>
-3.$`cd Blog`でMoneyHubディレクトリに移動する。  
+3.$`cd Blog`でBlogディレクトリに移動する。  
 <br>
 4.$`docker-compose up -d`でアプリを起動する。  
 <br>
