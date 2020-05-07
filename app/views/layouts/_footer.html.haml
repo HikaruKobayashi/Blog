@@ -2,7 +2,7 @@
   .container
     .row
       .col-sm-3
-        %h4.title Hikaru
+        %h4.title.footer-title 弟と、おれ。
         %p This site has been created free of charge for those who strive to work on new things.
         %p We are supporting you.
         -# %ul.social-icon
@@ -30,9 +30,9 @@
           %a{:href => "#"}
             -# %i.fa.fa-user{"aria-hidden" => "true"}
             English
-          %a{:href => "#"}
-            -# %i.fa.fa-globe{"aria-hidden" => "true"}
-            Ranking
+          -# %a{:href => "#"}
+          -#   -# %i.fa.fa-globe{"aria-hidden" => "true"}
+          -#   Ranking
       .col-sm-3
         %h4.title Category
         .category
@@ -42,8 +42,8 @@
           %a{:href => "#"} Girl
           %a{:href => "#"} English
           %a{:href => "#"} Programming
-          %a{:href => "#"} Spanish
-          %a{:href => "#"} Russian
+          -# %a{:href => "#"} Spanish
+          -# %a{:href => "#"} Russian
           %a{:href => "#"} IT
       - if current_user
         %li.nav-item{ style: 'list-style: none;' }
