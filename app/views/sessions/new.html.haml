@@ -3,7 +3,9 @@
 -# ----------------------------
 = render 'layouts/header'
 
-%h1 ログイン
+%img.main-img{ :src => "assets/sand.jpg" }
+
+%h2.top-title Login
 = form_with scope: :session, local: true do |f|
   .form-group
     = f.label :email, 'メールアドレス'
