@@ -51,7 +51,7 @@
                 -# %p= post.created_at.strftime('%Y/%m/%d %H:%M')
                 = f.label :article, post.article
               -# %p= post.name
-              %p= link_to 'Read more...', post, id: 'detail-' + post.id.to_s
+              %p= link_to 'Read more...', post, id: 'detail-' + post.id.to_s, class: 'read-more'
 
         -# %h2.top-title Popular
         -# - @post.each.with_index(1) do |rank, i|

@@ -3,9 +3,11 @@
 -# ----------------------------
 = render 'layouts/header'
 
+%img.main-img{ :src => "assets/sand.jpg" }
+
 = form_for @inquiry, :url => inquiry_confirm_path do |f|
   .contact-title.col-12
-    %h1 Contact
+    %h2.top-title Contact
 
   .wrapper.col-12{ style: 'width: 600px;' }
     - if @inquiry.errors.any?

@@ -2,7 +2,7 @@
   .container
     .row
       .col-sm-3
-        %h4.title.footer-title 弟と、おれ。
+        %h4.title.footer-title HikaBlog
         %p This site has been created free of charge for those who strive to work on new things.
         %p We are supporting you.
         -# %ul.social-icon
@@ -19,7 +19,7 @@
         -#   %a.social{:href => "#"}
         -#     %i.fa.fa-dribbble{"aria-hidden" => "true"}
       .col-sm-3
-        %h4.title Our Blog
+        %h4.title Category
         %span.acount-icon
           %a{:href => "#"}
             -# %i.fa.fa-heart{"aria-hidden" => "true"}
@@ -30,21 +30,24 @@
           %a{:href => "#"}
             -# %i.fa.fa-user{"aria-hidden" => "true"}
             English
+          %a{:href => "#"}
+            -# %i.fa.fa-user{"aria-hidden" => "true"}
+            Contact
           -# %a{:href => "#"}
           -#   -# %i.fa.fa-globe{"aria-hidden" => "true"}
           -#   Ranking
-      .col-sm-3
-        %h4.title Category
-        .category
-          %a{:href => "#"} Men
-          %a{:href => "#"} Women
-          %a{:href => "#"} Boy
-          %a{:href => "#"} Girl
-          %a{:href => "#"} English
-          %a{:href => "#"} Programming
-          -# %a{:href => "#"} Spanish
-          -# %a{:href => "#"} Russian
-          %a{:href => "#"} IT
+      -# .col-sm-3
+      -#   %h4.title Category
+      -#   .category
+      -#     %a{:href => "#"} Men
+      -#     %a{:href => "#"} Women
+      -#     %a{:href => "#"} Boy
+      -#     %a{:href => "#"} Girl
+      -#     %a{:href => "#"} English
+      -#     %a{:href => "#"} Programming
+      -#     -# %a{:href => "#"} Spanish
+      -#     -# %a{:href => "#"} Russian
+      -#     %a{:href => "#"} IT
       - if current_user
         %li.nav-item{ style: 'list-style: none;' }
           %button.btn.btn-warning{type: 'button', style: 'margin: 5px;' }
