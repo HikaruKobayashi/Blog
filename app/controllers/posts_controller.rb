@@ -6,10 +6,11 @@ class PostsController < ApplicationController
   end
 
   def english
+    @post = Post.where(label: 'English')
   end
 
   def programming
-    @post = Post.all
+    @post = Post.where(label: 'Programming')
   end
 
   def show
