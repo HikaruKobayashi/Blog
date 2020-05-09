@@ -2,15 +2,15 @@ class PostsController < ApplicationController
   PER = 10
 
   def index
-    @post = Post.page(params[:page]).per(PER)
+    @post = Post.page(params[:page]).per(PER).order(id: 'DESC')
   end
 
   def english
-    @post = Post.where(label: 'English')
+    @post = Post.where(label: 'English').order(id: 'DESC')
   end
 
   def programming
-    @post = Post.where(label: 'Programming')
+    @post = Post.where(label: 'Programming').order(id: 'DESC')
   end
 
   def show
