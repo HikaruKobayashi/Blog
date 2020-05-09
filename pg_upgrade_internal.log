@@ -1,0 +1,7 @@
+
+-----------------------------------------------------------------
+  pg_upgrade run on Thu May  7 22:34:00 2020
+-----------------------------------------------------------------
+
+check for "/usr/local/Cellar/postgresql/12.2/bin" failed: No such file or directory
+
