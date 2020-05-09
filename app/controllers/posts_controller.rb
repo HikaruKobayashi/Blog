@@ -3,6 +3,13 @@ class PostsController < ApplicationController
     @post = Post.all
   end
 
+  def english
+  end
+
+  def programming
+    @post = Post.all
+  end
+
   def show
     @post = Post.find(params[:id])
   end

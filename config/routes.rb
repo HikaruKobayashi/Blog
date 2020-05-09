@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: 'posts#index'
-  resources :posts, only: [:index, :new, :create, :show, :edit, :update]
+  resources :posts
   post 'posts/:id/destroy' => 'posts#destroy'
+  get "/english" => "posts#english"
+  get "/programming" => "posts#programming"
 
   # resources :introduction, only: [:index]
 
