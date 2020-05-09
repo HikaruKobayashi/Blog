@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  PER = 10
+
   def index
-    @post = Post.all
+    @post = Post.page(params[:page]).per(PER)
   end
 
   def english
