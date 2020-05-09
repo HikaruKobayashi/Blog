@@ -53,8 +53,8 @@
           %button.btn.btn-warning{type: 'button', style: 'margin: 5px;' }
             = link_to 'ログアウト', logout_path, method: :delete, class: 'log-in-btn'
       - else
-        %li.nav-item{ style: 'list-style: none;' }
-          %button.btn.btn-warning{ type: 'button', style: 'margin: 5px;' }
-            = link_to '管理者の方', login_path, class: 'log-in-btn'
+        -# %li.nav-item{ style: 'list-style: none;' }
+        -#   %button.btn.btn-warning{ type: 'button', style: 'margin: 5px;' }
+        -#     = link_to '管理者の方', login_path, class: 'log-in-btn'
     %hr/
     .row.text-center © 2020. Made by Hikaru.
