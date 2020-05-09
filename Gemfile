@@ -69,7 +69,12 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Add Gem
 # 画像を載せられるようにする
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
+
+# FontAwesome
+gem 'font-awesome-sass', '~> 5.4.1'
+
+# Kaminari
+gem 'kaminari', '~> 0.17.0'
