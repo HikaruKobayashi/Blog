@@ -36,6 +36,9 @@
         %p= simple_format(@post.article)
     .footer-article
       %p= @post.name
+      .icon-area
+        %i.fab.fa-twitter.sns-icon
+        %i.fab.fa-instagram.sns-icon
       %p= @post.created_at.strftime('%Y/%m/%d')
 -# ----------------------------
 -# footer
