@@ -8,15 +8,15 @@
 .container
   .row
     - if current_user
-      .wrapper.col-12
+      .wrapper.col-12.administrator-graph
         %body.col-12
           %table.table.table-striped.table-bordered
             %thead
               %tr
-                %th タイトル
-                %th 投稿者
+                %th Title
+                %th Name
                 %th id
-                %th 投稿日時
+                %th Date
                 %th
                 %th
             %tbody
@@ -27,10 +27,10 @@
                 %td= post.id
                 %td= post.created_at.strftime('%Y/%m/%d %H:%M')
                 %td
-                  = link_to "編集", edit_post_path(post)
+                  = link_to "Edit", edit_post_path(post), class: 'btn btn-warning', style: 'color: rgb(255, 255, 255);'
                 %td
                   = link_to "/posts/#{post.id}/destroy", {method: "post"} do
-                    %button 削除
+                    %button.btn.btn-danger Delete
 
     -# form_withを使って書き換えする
     .wrapper.col-12

@@ -3,23 +3,25 @@
 -# ----------------------------
 = render 'layouts/header'
 
+%h2.top-title List of administrators
 .container
   .row
-    %body.col-12
-      %table.table.table-striped.table-bordered
-        %thead
-          %tr
-            %th ユーザー名
-            %th メールアドレス
-            %th
-        %tbody
-        - @user.each do |user|
-          %tr
-            %th= user.name
-            %td= user.email
-            %td
-              = link_to "/admin/users/#{user.id}/destroy", {method: "user"} do
-                %button 削除
+    .wrapper.col-12.administrator-graph
+      %body.col-12
+        %table.table.table-striped.table-bordered
+          %thead
+            %tr
+              %th Name
+              %th E-mail
+              %th
+          %tbody
+          - @user.each do |user|
+            %tr
+              %th= user.name
+              %td= user.email
+              %td
+                = link_to "/admin/users/#{user.id}/destroy", {method: "user"} do
+                  %button.btn.btn-danger Delete
 
 -# ----------------------------
 -# footer

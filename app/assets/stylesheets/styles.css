@@ -1,14 +1,14 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Merienda');
 
+* {
+  font-family: 'Cormorant Upright',serif;
+}
+
 /* header */
 .header {
   height: 90px;
   background-color: rgb(255, 255, 255);
-}
-
-.header-title {
-  font-family: 'Cormorant Upright',serif;
 }
 
 .main-img {
@@ -41,6 +41,10 @@ body {
   width: 1000px;
   margin-top: 70px;
   margin: auto;
+}
+
+.administrator-graph {
+  margin: 100px 0 100px 0;
 }
 
 .post-label {

@@ -3,30 +3,36 @@
 -# ----------------------------
 = render 'layouts/header'
 
-%h2 記事編集
-%div
+%h2.top-title Edit the Article
 = form_for @post do |f|
-  .form-group
-    = f.label :name, 'ユーザー名'
-    = f.text_field :name, class: 'form-control'
-    %small#poster-tip.form-text.text-muted
-      名前を入力してください。
-  .form-group
-    = f.label :title, 'タイトル'
-    = f.text_area :title, class: 'form-control'
-  .form-group
-    = f.label :article, '内容'
-    = f.text_area :article, class: 'form-control', rows:10
-    %small.form-text.text-muted{:id => "content-tip\""}
-      投稿内容を入力してください。
-  .form-group
-    %p ラベル
-    = f.select :label, [['English', 'English'], ['Programming', 'Programming']]
-  .form-group
-    %p 画像
-    = f.file_field :image
-
-  = f.submit 'submit', class: 'btn btn-info btn-block'
+  .wrapper.col-10
+    .form-group
+      = f.label :name, 'Name', class: 'contact-text'
+      = f.text_field :name, class: 'text-box'
+      %small#poster-tip.form-text.text-muted
+        Write your name.
+    .form-group
+      = f.label :title, 'Title', class: 'contact-text'
+      = f.text_area :title, class: 'text-box'
+      %small#poster-tip.form-text.text-muted
+        Write the title.
+    .form-group
+      = f.label :article, 'Content', class: 'contact-text'
+      = f.text_area :article, class: 'text-box', rows:10
+      %small.form-text.text-muted{:id => "content-tip\""}
+        Please enter the post content.
+    .form-group
+      %p Label
+      = f.select :label, [['English', 'English'], ['Programming', 'Programming']]
+      %small#poster-tip.form-text.text-muted
+        Select the label.
+    .form-group
+      %p Image
+      = f.file_field :image
+      %small#poster-tip.form-text.text-muted
+        Do you want to use thumbnail images?
+  .col-12.login-btn
+    = f.submit 'Edit', class: 'btn btn-dark'
 
 -# ----------------------------
 -# footer

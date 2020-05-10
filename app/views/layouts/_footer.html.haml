@@ -5,19 +5,6 @@
         %h4.title.footer-title HikaBlog
         %p This site has been created free of charge for those who strive to work on new things.
         %p We are supporting you.
-        -# %ul.social-icon
-        -#   %a.social{:href => "#"}
-        -#     %i.fa.fa-facebook{"aria-hidden" => "true"}
-        -#   %a.social{:href => "#"}
-        -#     %i.fa.fa-twitter{"aria-hidden" => "true"}
-        -#   %a.social{:href => "#"}
-        -#     %i.fa.fa-instagram{"aria-hidden" => "true"}
-        -#   %a.social{:href => "#"}
-        -#     %i.fa.fa-youtube-play{"aria-hidden" => "true"}
-        -#   %a.social{:href => "#"}
-        -#     %i.fa.fa-google{"aria-hidden" => "true"}
-        -#   %a.social{:href => "#"}
-        -#     %i.fa.fa-dribbble{"aria-hidden" => "true"}
       .col-sm-3
         %h4.title.footer-title Category
         %span.acount-icon
@@ -36,23 +23,11 @@
           -# %a{:href => "#"}
           -#   -# %i.fa.fa-globe{"aria-hidden" => "true"}
           -#   Ranking
-      -# .col-sm-3
-      -#   %h4.title Category
-      -#   .category
-      -#     %a{:href => "#"} Men
-      -#     %a{:href => "#"} Women
-      -#     %a{:href => "#"} Boy
-      -#     %a{:href => "#"} Girl
-      -#     %a{:href => "#"} English
-      -#     %a{:href => "#"} Programming
-      -#     -# %a{:href => "#"} Spanish
-      -#     -# %a{:href => "#"} Russian
-      -#     %a{:href => "#"} IT
-      - if current_user
-        %li.nav-item{ style: 'list-style: none;' }
-          %button.btn.btn-warning{type: 'button', style: 'margin: 5px;' }
-            = link_to 'ログアウト', logout_path, method: :delete, class: 'log-in-btn'
-      - else
+      -# - if current_user
+      -#   %li.nav-item{ style: 'list-style: none;' }
+      -#     %button.btn.btn-dark{type: 'button', style: 'margin: 5px;' }
+      -#       = link_to 'ログアウト', logout_path, method: :delete, class: 'log-in-btn'
+      -# - else
         -# %li.nav-item{ style: 'list-style: none;' }
         -#   %button.btn.btn-warning{ type: 'button', style: 'margin: 5px;' }
         -#     = link_to '管理者の方', login_path, class: 'log-in-btn'

@@ -7,29 +7,32 @@
       - if current_user
         %li.nav-item
           %a
-          = link_to 'Home', posts_path, class: 'nav-link'
-        -# %li.nav-item
-        -#   %a
-        -#   = link_to 'About us', introduction_path, class: 'nav-link'
+            = link_to 'Home', posts_path, class: 'nav-link'
         %li.nav-item
           %a
-            = link_to 'Contact', inquiry_path, class: 'nav-link'
+            = link_to 'English', english_path, class: 'nav-link'
         %li.nav-item
-          %button.btn.btn-warning{type: 'button', style: 'margin: 5px;' }
-            = link_to '管理者一覧', admin_users_path
+          %a
+            = link_to 'Programming', programming_path	, class: 'nav-link'
         %li.nav-item
-          %button.btn.btn-warning{type: 'button', style: 'margin: 5px;' }
-            = link_to '新規作成', new_post_path
+          %a
+            = link_to 'Contact', inquiry_path, class: 'nav-link', id: 'contact-btn'
         %li.nav-item
-          %button.btn.btn-warning{type: 'button', style: 'margin: 5px;' }
-            = link_to '管理者新規登録', new_admin_user_path
+          %button.btn.btn-dark{type: 'button', style: 'margin: 5px;' }
+            = link_to 'New Article', new_post_path, class: 'log-in-btn'
+        %li.nav-item
+          %button.btn.btn-dark{type: 'button', style: 'margin: 5px;' }
+            = link_to 'List of Admin', admin_users_path, class: 'log-in-btn'
+        %li.nav-item
+          %button.btn.btn-dark{type: 'button', style: 'margin: 5px;' }
+            = link_to 'New admin', new_admin_user_path, class: 'log-in-btn'
+        %li.nav-item{ style: 'list-style: none;' }
+          %button.btn.btn-dark{type: 'button', style: 'margin: 5px;' }
+            = link_to 'Logout', logout_path, method: :delete, class: 'log-in-btn'
       - else
         %li.nav-item
           %a
           = link_to 'Home', posts_path, class: 'nav-link'
-        -# %li.nav-item
-        -#   %a
-        -#   = link_to 'About us', introduction_index_path, class: 'nav-link'
         %li.nav-item
           %a
             = link_to 'English', english_path, class: 'nav-link'
