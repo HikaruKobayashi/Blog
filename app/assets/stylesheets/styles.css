@@ -207,32 +207,7 @@ body {
 .cp_snslink04 .cp_link:last-of-type {
 	border-bottom: none;
 }
-/* pop-up */
-/* .cp_snslink04 .cp_link span {
-	line-height: 0.75em;
-	position: absolute;
-	top: 0.5em;
-	right: -25px;
-	left: -25px;
-	visibility: hidden;
-	min-width: 7em;
-	height: 1.5em;
-	padding: 5px 7px;
-	-webkit-transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	opacity: 0;
-	color: #ffffff;
-	border-radius: 2px;
-}
-.cp_snslink04 .cp_link:hover span {
-	left: 50px;
-	visibility: visible;
-	opacity: 1; */
-/* } */
 
-/* .cp_snslink04 .cp_link.facebook::before {
-	content:'\f09a';
-} */
 /* twitter */
 .cp_snslink04 .twitter:hover,
 .cp_snslink04 .twitter:hover span {
@@ -242,10 +217,6 @@ body {
 	content:'\f099';
 }
 
-/* .cp_snslink04 .cp_link.google::before {
-	content:'\f0d5';
-} */
-/* instagram */
 .cp_snslink04 .instagram:hover,
 .cp_snslink04 .instagram:hover span {
 	background: linear-gradient(45deg, #fdf497,#fd5949,#d6249f,#285aeb );
