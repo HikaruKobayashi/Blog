@@ -9,7 +9,7 @@
   .contact-title.col-12
     %h2.top-title Contact
 
-  .wrapper.col-12{ style: 'width: 600px;' }
+  .wrapper.col-12{ style: 'width: 550px;' }
     - if @inquiry.errors.any?
       %p 入力内容に誤りがあります。
       %ul
@@ -19,16 +19,16 @@
 
     %table.contact-form.col-12
       %tr.col-12
-        %th 名前
-        %td= f.text_field :name
+        %th.contact-text Name
+        %td= f.text_field :name, { class: 'text-box' }
       %tr.col-12
-        %th メールアドレス
-        %td= f.text_field :email
+        %th.contact-text E-mail
+        %td= f.email_field :email, { class: 'text-box' }
       %tr.col-12
-        %th お問い合わせ内容
-        %td= f.text_area :message
+        %th.contact-text Message
+        %td= f.text_area :message, { class: 'textlines' }
 
-  = f.submit '確認', class: 'btn btn-primary submit-btn col-4'
+  = f.submit 'Send', class: 'btn btn-dark submit-btn'
 
 -# ----------------------------
 -# footer
