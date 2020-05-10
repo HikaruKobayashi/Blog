@@ -7,14 +7,16 @@
 
 %h2.top-title Login
 = form_with scope: :session, local: true do |f|
-  .form-group
-    = f.label :email, 'メールアドレス'
-    = f.text_field :email, class: 'form-control', id: 'session_email'
-  .form-group
-    = f.label :password, 'パスワード'
-    = f.password_field :password, class: 'font-control', id: 'session_password'
-
-  =f.submit 'ログインする', class: 'btn btn-primary'
+  .wrapper.col-12{ style: 'width: 550px;' }
+    .form-group
+      = f.label :email, 'E-mail', class: 'contact-text'
+      = f.text_field :email, class: 'text-box', id: 'session_email'
+    .form-group
+      = f.label :password, 'Password', class: 'contact-text'
+      = f.password_field :password, class: 'text-box', id: 'session_password'
+    
+    .col-12.login-btn
+      = f.submit 'Login', class: 'btn btn-dark submit-btn'
 
 
 -# ----------------------------

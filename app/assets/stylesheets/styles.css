@@ -113,6 +113,10 @@ body {
   text-align: center;
 }
 
+.login-btn {
+  text-align: center;
+}
+
 /* Contact Page */
 .contact-title {
   width: 100%;
