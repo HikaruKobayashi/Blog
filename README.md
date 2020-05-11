@@ -1,9 +1,6 @@
 # Blog
 自作のブログサイトを作成する。
 
-## URL
-https://decode-land.herokuapp.com/
-
 ## 動作方法
 1.アプリを作成したいディレクトリに移動する。ex) `cd desktop`  
 <br>
