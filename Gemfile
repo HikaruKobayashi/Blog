@@ -77,4 +77,4 @@ gem 'mini_magick'
 gem 'font-awesome-sass', '~> 5.4.1'
 
 # Kaminari
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
