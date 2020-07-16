@@ -23,13 +23,15 @@
           -# %a{:href => "#"}
           -#   -# %i.fa.fa-globe{"aria-hidden" => "true"}
           -#   Ranking
-      -# - if current_user
-      -#   %li.nav-item{ style: 'list-style: none;' }
-      -#     %button.btn.btn-dark{type: 'button', style: 'margin: 5px;' }
-      -#       = link_to 'ログアウト', logout_path, method: :delete, class: 'log-in-btn'
-      -# - else
-        -# %li.nav-item{ style: 'list-style: none;' }
-        -#   %button.btn.btn-warning{ type: 'button', style: 'margin: 5px;' }
-        -#     = link_to '管理者の方', login_path, class: 'log-in-btn'
+      .col-sm-3
+        %h4.title.footer-title Admin
+        - if current_user
+          %li.nav-item{ style: 'list-style: none;' }
+            %button.btn.btn-dark{type: 'button', style: 'margin: 5px;' }
+              = link_to 'Log out', logout_path, method: :delete, class: 'log-in-btn'
+        - else
+          %li.nav-item{ style: 'list-style: none;' }
+            %button.btn.btn-dark{ type: 'button', style: 'margin: 5px;' }
+              = link_to 'Log in', login_path, class: 'log-in-btn'
     %hr/
     .row.text-center © 2020. Made by Hikaru.
