@@ -28,6 +28,14 @@ body {
   background-color: rgb(236, 238, 238);
 }
 
+.pagination a {
+  color: rgb(135, 140, 148);
+}
+.pagination a:hover {
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+}
+
 /* Category Page */
 .top-title {
   font-size: 50px;
